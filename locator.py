@@ -6,10 +6,13 @@ url = input("Please enter a valid URL:")
 response = requests.get(url)
 #print(response.text)
 
-text = open(response.text)
+file = open('response.text', 'w')
+file.write(response.text)
+file.close()
+
 d = dict()
 
-for line in text:
+for line in file:
     line = line.strip()
     line = line.lower()
     words = line.split(" ")
