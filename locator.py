@@ -11,7 +11,7 @@ d = dict()
 
 for line in text:
     line = line.strip()
-    line - line.lower()
+    line = line.lower()
     words = line.split(" ")
     for word in words:
         if word in d:
